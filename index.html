@@ -11,38 +11,27 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.1.0/paho-mqtt.min.js"></script>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>🚀 Robo Saper Controller</h1>
-      <div id="status" class="status">Ulanish...</div>
-    </header>
-
-    <div class="video-container">
-      <video id="remoteVideo" autoplay playsinline muted></video>
-      <div class="video-overlay">
-        <span id="videoStatus">Kamera yuklanmoqda...</span>
-      </div>
+  <div class="video-container">
+    <video id="remoteVideo" autoplay playsinline muted></video>
+    <div class="video-overlay">
+      <span id="videoStatus">Kamera yuklanmoqda...</span>
     </div>
 
-    <div class="controls">
-      <div class="joystick-wrapper">
-        <div class="joystick-label">Qo‘l 1</div>
-        <div class="joystick-left" id="joystick1"></div>
-      </div>
-      <div class="joystick-wrapper">
-        <div class="joystick-label">Qo‘l 2</div>
-        <div class="joystick-right" id="joystick2"></div>
-      </div>
+    <!-- Joysticklar (default ko'rinmaydi) -->
+    <div class="joystick-wrapper left" id="joystickWrapper1">
+      <div class="joystick-label">Qo‘l 1</div>
+      <div class="joystick-left" id="joystick1"></div>
     </div>
 
-    <div class="buttons">
-      <button id="stopBtn" class="emergency">🛑 Emergency Stop</button>
-      <button id="resetBtn">Reset Qo‘llar</button>
-      <div class="speed-control">
-        <input type="range" id="speedSlider" min="0" max="100" value="50">
-        <span id="speedValue">Tezlik: 50%</span>
-      </div>
+    <div class="joystick-wrapper right" id="joystickWrapper2">
+      <div class="joystick-label">Qo‘l 2</div>
+      <div class="joystick-right" id="joystick2"></div>
     </div>
+  </div>
+
+  <div class="header">
+    <h1>🚀 Robo Saper Controller</h1>
+    <div id="status" class="status">Ulanish...</div>
   </div>
 
   <script src="js/main.js"></script>
