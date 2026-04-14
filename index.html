@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robo Saper Controller</title>
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Socket.IO -->
+  <script src="https://cdn.jsdelivr.net/npm/socket.io-client@4.7.5/dist/socket.io.min.js"></script>
+  
+  <!-- NippleJS (joystick) -->
+  <script src="https://cdn.jsdelivr.net/npm/nipplejs@0.10.2/dist/nipplejs.min.js"></script>
+  
+  <!-- Paho MQTT -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.1.0/paho-mqtt.min.js"></script>
+
+</head>
+<body>
+  <!-- ... oldingi body qismi o'zgarmaydi ... -->
+  <div class="container">
+    <header>
+      <h1>🚀 Robo Saper Controller</h1>
+      <div id="status" class="status">Ulanish...</div>
+    </header>
+
+    <div class="video-container">
+      <video id="remoteVideo" autoplay playsinline muted></video>
+      <div class="video-overlay">
+        <span id="videoStatus">Kamera yuklanmoqda...</span>
+      </div>
+    </div>
+
+    <div class="controls">
+      <div class="joystick-left" id="joystick1"></div>
+      <div class="joystick-right" id="joystick2"></div>
+    </div>
+
+    <div class="buttons">
+      <button id="stopBtn" class="emergency">🛑 Emergency Stop</button>
+      <button id="resetBtn">Reset Qo‘llar</button>
+      <input type="range" id="speedSlider" min="0" max="100" value="50">
+      <span id="speedValue">Tezlik: 50%</span>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
